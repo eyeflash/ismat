@@ -11,14 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.homepage');
-});
+Route::get('/', 'PagesController@homepage');
 
 Route::get('about2', function () {
 	return 'ini halaman about';
 });
-Route::get('about', function () {
-	$halaman='about';
-	return view('pages.about', compact('halaman'));
-});
+Route::get('about', 'PagesController@about');
+
+Route::get('siswa', 'SiswaController@index');
